@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Car Marketplace{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="{{ url_for('home') }}" class="text-2xl font-bold text-gray-800">Automart</a>
+                <div>
+                    <a href="{{ url_for('home') }}" class="px-4 py-2 text-gray-600 hover:text-gray-800">Home</a>
+                    <a href="{{ url_for('browse_cars') }}" class="px-4 py-2 text-gray-600 hover:text-gray-800">Browse Cars</a>
+                    <a href="{{ url_for('suggest_price') }}" class="px-4 py-2 text-gray-600 hover:text-gray-800">Suggest Price</a>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('dashboard') }}" class="px-4 py-2 text-gray-600 hover:text-gray-800">Dealer Dashboard</a>
+                        <a href="{{ url_for('logout') }}" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Logout</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}" class="px-4 py-2 text-gray-600 hover:text-gray-800">Dealer Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="p-4 mb-4 text-sm text-{{ 'green' if category == 'success' else 'red' }}-700 bg-{{ 'green' if category == 'success' else 'red' }}-100 rounded-lg" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

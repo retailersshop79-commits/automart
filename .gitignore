@@ -1,0 +1,15 @@
+# Flask and Python
+instance/
+__pycache__/
+*.pyc
+.env
+venv/
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# OS / Editor specific
+.DS_Store
+.vscode/

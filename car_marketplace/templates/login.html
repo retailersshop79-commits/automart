@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Dealer Login{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Dealer Login</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="mb-4">
+            <label for="username" class="block text-gray-700 font-medium mb-2">Username</label>
+            <input type="text" id="username" name="username" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <div class="mb-6">
+            <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+            <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Login</button>
+    </form>
+    <p class="text-center text-gray-600 mt-4">
+        Don't have an account? <a href="{{ url_for('signup') }}" class="text-indigo-600 hover:underline">Sign up here</a>.
+    </p>
+</div>
+{% endblock %}

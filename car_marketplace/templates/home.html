@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Automart{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Automart</h1>
+    <p class="text-lg text-gray-600">The best place to buy and sell cars.</p>
+    <div class="mt-8">
+        <a href="{{ url_for('browse_cars') }}" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">Browse Cars</a>
+    </div>
+</div>
+{% endblock %}

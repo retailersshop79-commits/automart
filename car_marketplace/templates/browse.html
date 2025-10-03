@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Browse Cars{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-800">Browse Our Collection</h1>
+    <p class="text-gray-600">Find the perfect car for you.</p>
+</div>
+
+<!-- Search and Filter Form -->
+<div class="bg-white p-6 rounded-lg shadow-md mb-8">
+    <form method="GET" action="{{ url_for('browse_cars') }}">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <input type="text" name="make" placeholder="Make (e.g., Toyota)" class="px-4 py-2 border rounded-lg" value="{{ request.args.get('make', '') }}">
+            <input type="text" name="model" placeholder="Model (e.g., Camry)" class="px-4 py-2 border rounded-lg" value="{{ request.args.get('model', '') }}">
+            <input type="number" name="year" placeholder="Year" class="px-4 py-2 border rounded-lg" value="{{ request.args.get('year', '') }}">
+            <input type="number" name="max_price" placeholder="Max Price" class="px-4 py-2 border rounded-lg" value="{{ request.args.get('max_price', '') }}">
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors col-span-1 md:col-span-3 lg:col-span-1">Search</button>
+        </div>
+    </form>
+</div>
+
+<!-- Car Listings -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% for car in cars %}
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <a href="{{ url_for('car_detail', car_id=car.id) }}">
+            <img src="{{ car.image_url or 'https://via.placeholder.com/400x300' }}" alt="{{ car.make }} {{ car.model }}" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-gray-800">{{ car.year }} {{ car.make }} {{ car.model }}</h2>
+                <p class="text-xl font-semibold text-indigo-600 mt-2">${{ "{:,.0f}".format(car.price) }}</p>
+                <div class="text-gray-600 mt-2">
+                    <span>{{ "{:,.0f}".format(car.mileage) }} miles</span>
+                </div>
+                <div class="mt-4 border-t pt-4">
+                    <p class="text-sm text-gray-500">Sold by: <a href="{{ url_for('dealer_page', username=car.dealer.username) }}" class="font-semibold text-indigo-600 hover:underline">{{ car.dealer.username }}</a></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% else %}
+    <p class="text-center text-gray-600 col-span-full">No cars found matching your criteria. Try adjusting your search.</p>
+    {% endfor %}
+</div>
+{% endblock %}

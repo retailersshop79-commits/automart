@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}AI Price Suggester{% endblock %}
+
+{% block content %}
+<div class="max-w-xl mx-auto text-center">
+    <h1 class="text-3xl font-bold text-gray-800">AI-Powered Price Suggester</h1>
+    <p class="text-gray-600 mt-2">Get a fair market price estimate for a car based on its make, model, and year.</p>
+</div>
+
+<div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+    <form method="POST" action="{{ url_for('suggest_price') }}">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div>
+                <label for="make" class="block text-gray-700 font-medium mb-2">Make</label>
+                <input type="text" id="make" name="make" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required value="{{ make if make }}">
+            </div>
+            <div>
+                <label for="model" class="block text-gray-700 font-medium mb-2">Model</label>
+                <input type="text" id="model" name="model" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required value="{{ model if model }}">
+            </div>
+            <div>
+                <label for="year" class="block text-gray-700 font-medium mb-2">Year</label>
+                <input type="number" id="year" name="year" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required value="{{ year if year }}">
+            </div>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Suggest Price</button>
+    </form>
+
+    {% if suggested_price %}
+    <div class="mt-8 p-6 bg-indigo-50 border-2 border-indigo-200 rounded-lg text-center">
+        <p class="text-gray-700 text-lg">Estimated Fair Market Price:</p>
+        <p class="text-4xl font-bold text-indigo-600 mt-2">${{ "{:,.0f}".format(suggested_price) }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
