@@ -5,106 +5,110 @@
 <title>My Listings</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1193d4",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101c22",
-                        "foreground-light": "#111618",
-                        "foreground-dark": "#f6f7f8",
-                        "subtle-light": "#617c89",
-                        "subtle-dark": "#a0b3bd",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "0.75rem",
-                        "xl": "1rem",
-                        "full": "9999px"
-                    },
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#4f46e5",
+                    "background-light": "#f8fafc",
+                    "background-dark": "#0f172a",
+                    "foreground-light": "#020617",
+                    "foreground-dark": "#f8fafc",
+                    "subtle-light": "#64748b",
+                    "subtle-dark": "#94a3b8",
+                    "surface-light": "#ffffff",
+                    "surface-dark": "#1e293b",
                 },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.25rem", "full": "9999px"},
             },
-        }
-    </script>
-<style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-    </style>
+        },
+    }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
-  </style>
-  </head>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</head>
 <body class="bg-background-light dark:bg-background-dark font-display">
-<div class="flex flex-col h-screen justify-between">
-<div>
-<header class="bg-background-light dark:bg-background-dark sticky top-0 z-10 px-4 pt-6 pb-4">
-<div class="relative flex items-center justify-center">
-<button class="absolute left-0 text-foreground-light dark:text-foreground-dark">
-<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
-</svg>
-</button>
-<h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">My Listings</h1>
+<div class="max-w-md mx-auto min-h-screen flex flex-col">
+    <header class="bg-surface-light dark:bg-surface-dark sticky top-0 z-10 px-4 pt-6 pb-4">
+        <div class="relative flex items-center justify-center">
+            <button class="absolute left-0 text-foreground-light dark:text-foreground-dark">
+                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+            </button>
+            <h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">My Listings</h1>
+        </div>
+    </header>
+    <main class="px-4 space-y-3 pb-24 flex-grow">
+        <div class="bg-surface-light dark:bg-surface-dark rounded-lg p-3 flex items-center gap-4 shadow-sm">
+            <img alt="Mercedes-Benz C-Class" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiuTDlHerYMio1f0ZZZ52XT0jxd78OSCLudUzU9WT3Pa1AmbrUxUngg5Uucb8A9ejF12BgBqDnORJ7cvVGXR32E3PF3k0s5YuLh_9gffoUA13yXUcpE7Ye3g9sRFkLZ2CkbASswNLgIEVS8_7e8pwm-ssuPqXkJP0ZL2au9lPmdTkLKSeSc98NUjv9Z0e82T7eA2MdzIu5Ca7Hn1Jnvr5dCFcADZJ6-3liHI4Ixnvquhu4pFx05uUtqSuOZ5biPVIZUiMjS8ho3IE"/>
+            <div class="flex-1">
+                <h2 class="font-bold text-foreground-light dark:text-foreground-dark">Mercedes-Benz C-Class</h2>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">2018 • 12,000 miles</p>
+            </div>
+            <div class="flex gap-2">
+                <button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+                    <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div class="bg-surface-light dark:bg-surface-dark rounded-lg p-3 flex items-center gap-4 shadow-sm">
+            <img alt="BMW 3 Series" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYX9o_uZj7A5YvnEGZ-CtvNThinoPTzmAmUrrotAqI3wIkxyq90sYle6IKL7PeinXMEAjqL-4HrWtzzeIQDPLc_ozLaFpZMZMo6Ga4iqOcYcK5PrguRIqdDDZYO5qMwTyrpc1zzY2kexxM43Hmmeac3D22S5C4kb81zymD8jyECx0qXVdyfTPyRH0e6cLsFcFFthPCyCnqXH5UBiJkkXsCXEkcn34fIh7_s0wnkS39yfdRZZfxs0W-gJ2HZxtnjPKnUm5gf2d_38-"/>
+            <div class="flex-1">
+                <h2 class="font-bold text-foreground-light dark:text-foreground-dark">BMW 3 Series</h2>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">2020 • 15,000 miles</p>
+            </div>
+            <div class="flex gap-2">
+                <button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+                    <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div class="bg-surface-light dark:bg-surface-dark rounded-lg p-3 flex items-center gap-4 shadow-sm">
+            <img alt="Audi A4" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5PCHNJXhIqAedufI5PCQKTY-zEcBgOGH7PDbV87y7VqIIiqGWl_dfMqymvCEG2yfKd5TdLPFYFgtoakMZmkMY6BCNghWTpKsaLcdFgnSzUos8EwuxvRB7XpcbHV-_nxfB3MnZQeFxveACpuA4JXu8U3rqgKaaWiCQuOktIvQ4A2C0ZMZv_qNcggAEYeb0vx08m0vrdwEMuvSNCZwmPJCuDiRk9XayJte74xcyfdL53iis5dcq1aumLfATHh_DZLGsCXICa_yD9fXu"/>
+            <div class="flex-1">
+                <h2 class="font-bold text-foreground-light dark:text-foreground-dark">Audi A4</h2>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">2019 • 18,000 miles</p>
+            </div>
+            <div class="flex gap-2">
+                <button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+                    <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-t border-surface-light dark:border-surface-dark">
+        <div class="flex justify-around items-center h-20">
+            <a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="../index.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="../browse_cars_1/code.html">
+                <span class="material-symbols-outlined">directions_car</span>
+                <span class="text-xs font-medium">Browse</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="../dealer_login/code.html">
+                <span class="material-symbols-outlined">badge</span>
+                <span class="text-xs font-medium">Dealer</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-primary relative" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400">space_dashboard</span>
+                <span class="text-xs font-semibold">Dashboard</span>
+                <span class="absolute -bottom-2 w-1.5 h-1.5 bg-primary rounded-full"></span>
+            </a>
+        </div>
+    </footer>
 </div>
-</header>
-<main class="px-4 space-y-3 pb-24">
-<div class="bg-white dark:bg-background-dark/50 rounded-lg p-3 flex items-center gap-4 shadow-sm">
-<img alt="Mercedes-Benz C-Class" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiuTDlHerYMio1f0ZZZ52XT0jxd78OSCLudUzU9WT3Pa1AmbrUxUngg5Uucb8A9ejF12BgBqDnORJ7cvVGXR32E3PF3k0s5YuLh_9gffoUA13yXUcpE7Ye3g9sRFkLZ2CkbASswNLgIEVS8_7e8pwm-ssuPqXkJP0ZL2au9lPmdTkLKSeSc98NUjv9Z0e82T7eA2MdzIu5Ca7Hn1Jnvr5dCFcADZJ6-3liHI4Ixnvquhu4pFx05uUtqSuOZ5biPVIZUiMjS8ho3IE"/>
-<div class="flex-1">
-<h2 class="font-bold text-foreground-light dark:text-foreground-dark">Mercedes-Benz C-Class</h2>
-<p class="text-sm text-subtle-light dark:text-subtle-dark">2018 • 12,000 miles</p>
-</div>
-<div class="flex gap-2">
-<button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
-<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
-</button>
-</div>
-</div>
-<div class="bg-white dark:bg-background-dark/50 rounded-lg p-3 flex items-center gap-4 shadow-sm">
-<img alt="BMW 3 Series" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYX9o_uZj7A5YvnEGZ-CtvNThinoPTzmAmUrrotAqI3wIkxyq90sYle6IKL7PeinXMEAjqL-4HrWtzzeIQDPLc_ozLaFpZMZMo6Ga4iqOcYcK5PrguRIqdDDZYO5qMwTyrpc1zzY2kexxM43Hmmeac3D22S5C4kb81zymD8jyECx0qXVdyfTPyRH0e6cLsFcFFthPCyCnqXH5UBiJkkXsCXEkcn34fIh7_s0wnkS39yfdRZZfxs0W-gJ2HZxtnjPKnUm5gf2d_38-"/>
-<div class="flex-1">
-<h2 class="font-bold text-foreground-light dark:text-foreground-dark">BMW 3 Series</h2>
-<p class="text-sm text-subtle-light dark:text-subtle-dark">2020 • 15,000 miles</p>
-</div>
-<div class="flex gap-2">
-<button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
-<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
-</button>
-</div>
-</div>
-<div class="bg-white dark:bg-background-dark/50 rounded-lg p-3 flex items-center gap-4 shadow-sm">
-<img alt="Audi A4" class="h-20 w-24 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5PCHNJXhIqAedufI5PCQKTY-zEcBgOGH7PDbV87y7VqIIiqGWl_dfMqymvCEG2yfKd5TdLPFYFgtoakMZmkMY6BCNghWTpKsaLcdFgnSzUos8EwuxvRB7XpcbHV-_nxfB3MnZQeFxveACpuA4JXu8U3rqgKaaWiCQuOktIvQ4A2C0ZMZv_qNcggAEYeb0vx08m0vrdwEMuvSNCZwmPJCuDiRk9XayJte74xcyfdL53iis5dcq1aumLfATHh_DZLGsCXICa_yD9fXu"/>
-<div class="flex-1">
-<h2 class="font-bold text-foreground-light dark:text-foreground-dark">Audi A4</h2>
-<p class="text-sm text-subtle-light dark:text-subtle-dark">2019 • 18,000 miles</p>
-</div>
-<div class="flex gap-2">
-<button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
-<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
-</button>
-</div>
-</div>
-</main>
-</div>
-<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<button class="w-full flex items-center justify-center gap-2 h-12 px-6 bg-primary text-white rounded-lg font-bold shadow-lg shadow-primary/30">
-<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
-</svg>
-<span>Add New Listing</span>
-</button>
-</footer>
-</div>
-
 </body></html>
