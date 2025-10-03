@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Car Listing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1193d4',
+              'background-light': '#f6f7f8',
+              'background-dark': '#101c22',
+            },
+            fontFamily: {
+              display: ['Manrope'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .form-input {
+        background-color: #e2e8f0;border-color: #e2e8f0;}
+      .dark .form-input {
+        background-color: #1e293b;border-color: #1e293b;}
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-background-light px-4 py-3 dark:border-slate-800 dark:bg-background-dark">
+<button class="text-slate-900 dark:text-white">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m15 18-6-6 6-6"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Add Listing</h1>
+<div class="w-6"></div>
+</header>
+<main class="flex-1 overflow-y-auto p-6">
+<form class="space-y-6">
+<div class="flex items-center justify-center rounded-lg border-2 border-dashed border-slate-300 bg-slate-100 p-8 dark:border-slate-700 dark:bg-slate-900">
+<div class="text-center">
+<svg class="mx-auto h-12 w-12 text-slate-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect>
+<circle cx="9" cy="9" r="2"></circle>
+<path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+</svg>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Tap to upload an image</p>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="make">Make</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="make" name="make" placeholder="e.g., Toyota" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="model">Model</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="model" name="model" placeholder="e.g., Camry" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="year">Year</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="year" name="year" placeholder="e.g., 2023" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="mileage">Mileage</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="mileage" name="mileage" placeholder="e.g., 15000" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="price">Price ($)</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="price" name="price" placeholder="e.g., 25000" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Description</label>
+<textarea class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="description" name="description" placeholder="Add a description..." rows="4"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="whatsapp">WhatsApp Number</label>
+<input class="mt-1 block w-full rounded-lg border-transparent bg-slate-200 text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="whatsapp" name="whatsapp" placeholder="Your contact number" type="tel"/>
+</div>
+</form>
+</main>
+<footer class="sticky bottom-0 bg-background-light p-4 dark:bg-background-dark">
+<button class="w-full rounded-lg bg-primary py-3 font-bold text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-[1.02]">Add Listing</button>
+</footer>
+</div>
+
+</body></html>

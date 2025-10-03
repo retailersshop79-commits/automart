@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center justify-between p-4">
+<button class="text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white flex-1 text-center">Notifications</h1>
+<div class="w-8"></div>
+</div>
+<div class="border-b border-slate-200 dark:border-slate-800">
+<nav class="flex px-4 -mb-px">
+<a class="flex-1 text-center py-3 border-b-2 border-primary text-primary font-bold text-sm" href="#">All</a>
+<a class="flex-1 text-center py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium text-sm" href="#">Messages</a>
+<a class="flex-1 text-center py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium text-sm" href="#">Updates</a>
+</nav>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<ul class="divide-y divide-slate-200 dark:divide-slate-800">
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="Toyota Camry" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA69DoilYhjuzDBftdoLsH7BMCnk6wu2WYnGTPsgVY7XybdVzClTzEFDPNT4OFTVxlrtQ6XpWFQz2VdXw69utHP-q0i5rKqafMzLzSPxprJdeZFDiboySna6J6S40UxLq4rS_qZX1eJHeqJ1wcuH5cp2hTptYsb-eJQJYyhsR3SNsVxYjhbA19AJxZefzxKMgae_ZyYk1OVtsvFf2cBO4CLoyTTHzg09ZJlpIMdNfwYiEOkHdn7f_LTwGxoW0xadZmC_1YxPSaPWZ_s"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;">arrow_downward</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">Price Drop</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">10m ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2023 Toyota Camry</p>
+</div>
+</li>
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="Honda Civic" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0igxVGZY_JC1rHj22lz6LhpFhmCnKnAWEDvCZBisG0aHf3k7gTvwEoZgzsL_6R34dk2cNIlit8Khn7MhnuMzYcP_jQJgeZSWJjMvsxYGrPTHbcDE0HQA5advAHCkNYeQHlyo-lzzGDO4OhKnF0TgDJLiXCcw5Lq30TgxGkIWHRH04XLoekCg3jKGS76nKkTlFJLUfE13kS9Tnm9mejbBwgWPDB2Yk3XskumvQ-fQTrLD9WHwcrTsbsnvb-7z1mx3k_fvP-NkwWyCe"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-base">sell</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">New Listing</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3h ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2022 Honda Civic</p>
+</div>
+</li>
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="Ford Mustang" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9YrMPKmqr9Luziz5lqSOux8Y4AgU6Y6VOBlMH_1WLHkeuKVDi8PWt_YileKRAsCzfhgbH3r7qyXmU0HrAU0eAoFCc3yoqQ0AZ8CdbfzOI7onTu5MaqBXKfcckAMb2WrKM7nZukA0Oaw987QCHdSGMfCEqduCphtFs51r2FbsKYiiixl6dVxrYEppieEQsjB2YYagLnO3q6lmrK6thjfBr8E_U3tlGwJQuxOL8U-FZ3G2X17Kf1lOZsly334IoSgv4XAvj7J1pYyJw"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;">arrow_downward</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">Price Drop</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">1d ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2021 Ford Mustang</p>
+</div>
+</li>
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="Chevrolet Corvette" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOC8KRsprDQiqg1smyHb6BjBoTve863aCZWInKEzFlzw01DLbyz4qc9_97m-k51l2HqK5CVuwhnEfO2D6Qh_p4skTWrxlRXtCijtxPYvHNpWq51G0fp7zdCsgtJR1cPALSwm7nvY6WrOQSrUnVhKrDKaQLpblf7cc3EfDSo27V4pbCJ4hEoPnqx_Z8LVMGFL3rfCwmZQR3fUQNOGh6QE9ECi4HFM6H4P21paDCR57O7K_f1zxt6suJfhHyFc6nEVzJ4zySZ1Sjz8RF"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-base">sell</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">New Listing</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">2d ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2020 Chevrolet Corvette</p>
+</div>
+</li>
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="BMW 3 Series" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHIVyOIpSnJLTFUHCY15XttkwaFvhIMOq67CSpN8cBnBH3XukaVC74PzVjNGiJPYhi67-ju8Xgv6nvxxnck18qaUQXx7-eJWhW-PV6iLGCUnzdgV2gOveChGFbTKLbvG8Ef7WIO8ROcBAMdoknwk_d1xxQwMX-w1v3yMZrwdLukeB-KJ5uHNep2Phn4K1FbmH1JdFSeCo7m4m8coSOYVrc4lMyumP1xKRTGnbXKSX9HI6Eh7DVW7nmByA5gSXRUYN5zdFGQXV1mMLg"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;">arrow_downward</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">Price Drop</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">4d ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2019 BMW 3 Series</p>
+</div>
+</li>
+<li class="flex items-center gap-4 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img alt="Mercedes-Benz C-Class" class="w-14 h-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6j8nh3-c5hWpNVqeSSRhTRbEmunYzw2_1y3MdbHjXKKQZue-TUT3S1x3FxU5u_U8cjObfLDqAHUkx_uI9ntMFHywlICVILLcWb18cuBkym8bWAik-GkdH0x8DdLyh2FTB9DwD0wlTR2u9D8g7_ce0dihOQ_CMeXbGlbdCMX0M3q_xY0EywXOWM4EiWJrZ74nrRcXDzHTtakLfoNgzW4iBNAwLmmPoUqanXWcKsCLz_U_N3nTInShHfgby8dxMTsuPerl-IjFlw1op"/>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white text-xs">
+<span class="material-symbols-outlined text-base">sell</span>
+</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-bold text-slate-800 dark:text-white">New Listing</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">5d ago</p>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">2018 Mercedes-Benz C-Class</p>
+</div>
+</li>
+</ul>
+</main>
+<nav class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 p-2">
+<div class="flex justify-around">
+<a class="flex flex-col items-center gap-1 text-primary w-1/4" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 w-1/4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">directions_car</span>
+<span class="text-xs font-medium">Browse</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 w-1/4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">person</span>
+<span class="text-xs font-medium">Dealer</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 w-1/4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">speed</span>
+<span class="text-xs font-medium">Dashboard</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

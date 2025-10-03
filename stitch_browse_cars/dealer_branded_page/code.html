@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col font-display">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center p-4">
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-stone-800 dark:text-white">
+<span class="material-symbols-outlined text-2xl"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-stone-900 dark:text-white pr-10">Dealer Name</h1>
+</div>
+<div class="border-b border-stone-200 dark:border-stone-700 px-4">
+<nav class="-mb-px flex gap-8">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary pb-3 pt-2 text-sm font-bold text-primary" href="#">
+                Cars
+              </a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pb-3 pt-2 text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-primary dark:hover:text-primary" href="#">
+                Reviews
+              </a>
+</nav>
+</div>
+</header>
+<main class="divide-y divide-stone-200 dark:divide-stone-800">
+<div class="flex items-center gap-4 p-4">
+<div class="h-16 w-16 shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBeIVcKaa4-9ZJkqCxeSJYzWGLuQJR9j_YTb9ewODxzIAaVIDcT5aDjdFAEndrjCXAyE2Y2tVPXOLOTB6mxrTmqUWQrol5Eya35DNlkvMuaP7d-4mM5lgKwemAIMHkPuV_kZ5pfNkbLDwKBQ_hYMigVLOP0X4ItogoYtfh1ibpKhM6CtFnCCoNg-4wj_boQ7SC_s_T8gNr2B2K8y5fKr8wRfEDaCaniMCGSWScRbkUsDiPexQ0h4YSmUISIAXG5n_HrTS1xBgOsDzNH");'></div>
+<div class="flex flex-col">
+<p class="font-bold text-stone-900 dark:text-white">Honda Civic</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">2018 • 45,000 miles</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4">
+<div class="h-16 w-16 shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSpHEcEvmSf3viY4BQMmN8oaM-hjl8Q4xg5zmx74N77nb_t1Woq_gvCTiZk1-Wdpze-unCip8zzWAmoA3wLW1kNgECPV6yxw48eiFLDtiKoOM-tsD1OxOL8nnX9Svcd0jqt0J_SI73eSiWuJ_7p2S6Ry8EtoJ6SvtG3Br1emrHScgNWn7iRul7CBi0ILVhynXZHIwovvWS98UBCXaENwhHbNKb4lg8PQQOG3X3TVtk3tj-AVNuSOcvhKLdrzs4ku9WuPkjij0nbjXN");'></div>
+<div class="flex flex-col">
+<p class="font-bold text-stone-900 dark:text-white">Toyota Camry</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">2019 • 30,000 miles</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4">
+<div class="h-16 w-16 shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_T6lYjUEH2NqikiNFYOVLgt2DKNSOPlfWQPW2mm80GMKBSrnvIcG284I8ReC1dGS455SCoq976DILuSsANy7DUFg79kbYPK9y8IxOuJCtgU36Ra6p86-oZqYfgmq5pV6ajlu_2PZ2eEfyopuo86NJEB9AE535GGOd_W0x47TMD0AfMor4dy2mIykdoOF5_ZotnKdtlZRwQJ5faNx_AYr8l1NL4uLIuhDLejqqOa05ybECpieZusfF2m_068EuEHotuBD9QLzRMDnY");'></div>
+<div class="flex flex-col">
+<p class="font-bold text-stone-900 dark:text-white">Ford Mustang</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">2020 • 20,000 miles</p>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-stone-200 dark:border-stone-800 bg-background-light dark:bg-background-dark pb-4 pt-2">
+<nav class="flex justify-around">
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-2xl"> home </span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl"> directions_car </span>
+<span class="text-xs font-medium">Browse Cars</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-2xl"> person </span>
+<span class="text-xs font-medium">Dealer Login</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<span class="material-symbols-outlined text-2xl"> dashboard </span>
+<span class="text-xs font-medium">Dashboard</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

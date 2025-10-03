@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .otp-input::-webkit-outer-spin-button,
+    .otp-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .otp-input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col h-screen">
+<div class="flex flex-col flex-1 p-4 space-y-8" id="screen1">
+<header class="flex items-center justify-center relative">
+<button class="absolute left-0 text-gray-800 dark:text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Forgot Password</h1>
+</header>
+<main class="flex-1 flex flex-col justify-center">
+<div class="space-y-4 text-center">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Enter your email</h2>
+<p class="text-gray-600 dark:text-gray-400">We'll send a recovery link to your email.</p>
+</div>
+<div class="mt-8">
+<label class="sr-only" for="email">Email</label>
+<input class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg p-4 focus:ring-primary focus:border-primary" id="email" placeholder="you@example.com" type="email"/>
+</div>
+</main>
+<footer class="mt-auto">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+          Send Code
+        </button>
+</footer>
+</div>
+<div class="hidden flex-col flex-1 p-4 space-y-8" id="screen2">
+<header class="flex items-center justify-center relative">
+<button class="absolute left-0 text-gray-800 dark:text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Forgot Password</h1>
+</header>
+<main class="flex-1 flex flex-col justify-center">
+<div class="space-y-4 text-center">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Enter the code</h2>
+<p class="text-gray-600 dark:text-gray-400">We sent a code to your email. Please enter it below.</p>
+</div>
+<div class="mt-8 flex justify-center space-x-2">
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input w-12 h-14 text-center text-lg font-bold bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary" maxlength="1" type="number"/>
+</div>
+</main>
+<footer class="mt-auto">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+          Verify Code
+        </button>
+</footer>
+</div>
+<div class="hidden flex-col flex-1 p-4 space-y-8" id="screen3">
+<header class="flex items-center justify-center relative">
+<button class="absolute left-0 text-gray-800 dark:text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Forgot Password</h1>
+</header>
+<main class="flex-1 flex flex-col justify-center">
+<div class="space-y-4 text-center">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Set new password</h2>
+<p class="text-gray-600 dark:text-gray-400">Create a new, strong password for your account.</p>
+</div>
+<div class="mt-8 space-y-4">
+<div>
+<label class="sr-only" for="new-password">New Password</label>
+<input class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg p-4 focus:ring-primary focus:border-primary" id="new-password" placeholder="New Password" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="confirm-password">Confirm New Password</label>
+<input class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg p-4 focus:ring-primary focus:border-primary" id="confirm-password" placeholder="Confirm New Password" type="password"/>
+</div>
+</div>
+</main>
+<footer class="mt-auto">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+          Set Password
+        </button>
+</footer>
+</div>
+</div>
+
+</body></html>

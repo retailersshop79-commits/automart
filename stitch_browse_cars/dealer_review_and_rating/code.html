@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+            "foreground-light": "#111618",
+            "foreground-dark": "#ffffff",
+            "subtle-light": "#617c89",
+            "subtle-dark": "#a0b3bd",
+            "border-light": "#dbe2e6",
+            "border-dark": "#2d3e48",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-foreground-light dark:text-foreground-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-foreground-light dark:text-foreground-dark pr-6">Leave a Review</h1>
+</div>
+</header>
+<main class="p-4">
+<div class="flex items-center gap-4 mb-8">
+<img alt="Dealer avatar" class="h-16 w-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_-Ko7XvpURrm2yw_1Qhp4bp_y_AJS60y6SSkh_hgTJXWLfVilix5Vkil2zt7tKjzV3v1MAf9bjvo4pCLt-szaEGVTHZgNyeNov-Y3KIGjsJW4cGLTHVXkwk2pWvhIaSBINCui_g39hPFoUWwf0oTk4JjDWvoeiL8cTJhqF1vHxKEkRual41eigwVLTzTz52SK9Obh9ECeJr9WCznHVJkpVwK1ubmws3LyUqCUJsfQLLRXCy2Oh-4av-N_ZXBpITi2LOg1418Sz5ur"/>
+<div>
+<p class="text-xl font-bold text-foreground-light dark:text-foreground-dark">Auto World</p>
+<p class="text-base text-subtle-light dark:text-subtle-dark">Dealer</p>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h2 class="text-lg font-bold text-foreground-light dark:text-foreground-dark mb-4">How would you rate your experience?</h2>
+<fieldset class="flex items-center justify-between">
+<legend class="sr-only">Star rating</legend>
+<input class="peer hidden" id="rating-1" name="rating" type="radio"/>
+<label class="flex-1 text-center cursor-pointer peer-hover:text-primary peer-checked:text-primary text-subtle-light dark:text-subtle-dark transition-colors" for="rating-1">
+<span class="material-symbols-outlined !text-4xl">star</span>
+</label>
+<input class="peer hidden" id="rating-2" name="rating" type="radio"/>
+<label class="flex-1 text-center cursor-pointer peer-hover:text-primary peer-checked:text-primary text-subtle-light dark:text-subtle-dark transition-colors" for="rating-2">
+<span class="material-symbols-outlined !text-4xl">star</span>
+</label>
+<input class="peer hidden" id="rating-3" name="rating" type="radio"/>
+<label class="flex-1 text-center cursor-pointer peer-hover:text-primary peer-checked:text-primary text-subtle-light dark:text-subtle-dark transition-colors" for="rating-3">
+<span class="material-symbols-outlined !text-4xl">star</span>
+</label>
+<input class="peer hidden" id="rating-4" name="rating" type="radio"/>
+<label class="flex-1 text-center cursor-pointer peer-hover:text-primary peer-checked:text-primary text-subtle-light dark:text-subtle-dark transition-colors" for="rating-4">
+<span class="material-symbols-outlined !text-4xl">star</span>
+</label>
+<input class="peer hidden" id="rating-5" name="rating" type="radio"/>
+<label class="flex-1 text-center cursor-pointer peer-hover:text-primary peer-checked:text-primary text-subtle-light dark:text-subtle-dark transition-colors" for="rating-5">
+<span class="material-symbols-outlined !text-4xl">star</span>
+</label>
+</fieldset>
+</div>
+<div>
+<h2 class="text-lg font-bold text-foreground-light dark:text-foreground-dark mb-4">Write a Review</h2>
+<textarea class="form-textarea w-full resize-none rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark placeholder-subtle-light dark:placeholder-subtle-dark focus:border-primary focus:ring-primary h-36 p-3 text-base" placeholder="Share your experience with Auto World"></textarea>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4">
+<button class="w-full rounded-lg bg-primary py-3 px-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90">
+        Submit Review
+      </button>
+</footer>
+</div>
+
+</body></html>

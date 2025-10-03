@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dealer Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+            "foreground-light": "#111827",
+            "foreground-dark": "#f9fafb",
+            "card-light": "#ffffff",
+            "card-dark": "#1f2937",
+            "muted-light": "#6b7280",
+            "muted-dark": "#9ca3af",
+            "input-light": "#f3f4f6",
+            "input-dark": "#374151"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .form-input::placeholder {
+      color: #9ca3af;}
+    .dark .form-input::placeholder {
+      color: #6b7280;}
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex flex-col min-h-screen w-full">
+<header class="flex items-center justify-between p-4">
+<button class="text-foreground-light dark:text-foreground-dark">
+<svg class="lucide lucide-arrow-left" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="m12 19-7-7 7-7"></path>
+<path d="M19 12H5"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark flex-1 text-center pr-6">Dealer Login</h1>
+</header>
+<main class="flex-grow flex flex-col justify-center px-4">
+<div class="space-y-6">
+<div class="space-y-4">
+<div class="relative">
+<input class="form-input w-full rounded-lg border-none bg-input-light dark:bg-input-dark text-foreground-light dark:text-foreground-dark h-14 p-4 focus:ring-2 focus:ring-primary" placeholder="Email" type="email"/>
+</div>
+<div class="relative">
+<input class="form-input w-full rounded-lg border-none bg-input-light dark:bg-input-dark text-foreground-light dark:text-foreground-dark h-14 p-4 focus:ring-2 focus:ring-primary" placeholder="Password" type="password"/>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold h-12 rounded-lg text-base tracking-wide flex items-center justify-center">
+          Login
+        </button>
+<p class="text-center">
+<a class="text-sm font-medium text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-primary" href="#">
+            Don't have an account? <span class="font-bold">Sign up</span>
+</a>
+</p>
+</div>
+</main>
+<footer class="w-full">
+<img alt="Footer graphic" class="w-full block dark:hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPIcLXq2UKcYpOtL-9FMpn4W4vQ8WhRnHpeMWc3pTtPWWOuX6VUsn3vpEoNqhPepBeEaKT3kmg6oCKix4oE3Qc4V0BnddHRFO9MTEO6flElmnP0EgHjuVyT80bvJgnTCWR28d81F7MQHam1toS5BqKG-ybfsK0v8kblL-CLv3clPc2cdI_KeyGMel_6tKPk_UY-eqhTjj0kgu6xPWsVCwMN9roaQhgK0vfhYdMVUUDCtnBDRyTl02L4WjgfREnvOWjyjO9UwRuLzyd"/>
+<img alt="Footer graphic" class="w-full hidden dark:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3qemyGft5lA-K8UvhhmF7oxgaiFyWnFpu1n05reB2qqZ5uZB0bamKuXBrUwyPmcRHfApF8-t_Q07fevG9A1wo9DrvOY9xzv9ZeW0aayn5jQOIWBFUmGRXytBHqKrKH4QvEjemyibwKfsPud8XTBPQ5io-7n52cAtabC0QJVbghMNadwB9uZs_0BnmfJiyQGbAMEedeCmydll2LSTJ7aiYKzFCeivrmjjU0W60fq8nWhoDd05D93l-lWtriEck-0qJ9i2G4h50QkpR"/>
+</footer>
+</div>
+
+</body></html>

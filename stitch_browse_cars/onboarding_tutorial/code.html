@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Car Marketplace Onboarding</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex flex-1 flex-col">
+<div class="flex flex-1 flex-col items-center pt-8">
+<div class="mb-8 flex space-x-2">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20 dark:bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20 dark:bg-primary/30"></div>
+</div>
+<div class="mb-8 h-80 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKeZXbbDMjPwKyOFbJXcMeUjNlfzmpR6KcL3X4m7U3ppboTZv1Jl0SiSpQzt0SoRQVVOcRzSw-y-kBWOlq1eLo84sNraXPpzpEj8LUXLgZAzGC7nabKp9cpcx827H6oGsjLnNLCU8NNe3COFSUIBjO-aW8qQnXQkxFbe_oRCtb_uF_GQI_XfSwDW9EpGBNh_4sJwTu5p5i_GIR1lUvgaxHRl-sWRDChbj4NajFUj-waEdRmtcpHB1FXVeZuymkYsE5k-MFj6LX_kJH");'></div>
+<h1 class="text-3xl font-bold text-slate-800 dark:text-white px-6 text-center">Find Your Dream Car</h1>
+<p class="mt-2 text-slate-600 dark:text-slate-400 px-8 text-center">Browse a wide selection of vehicles from trusted dealers and private sellers.</p>
+</div>
+<div class="px-6 pb-6">
+<button class="w-full rounded-lg bg-primary py-3 text-white font-bold tracking-wide shadow-lg">Next</button>
+</div>
+</div>
+<div class="sticky bottom-0 border-t border-slate-200/50 dark:border-slate-800 bg-background-light dark:bg-background-dark pb-4 pt-2">
+<div class="flex justify-around">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined"> directions_car </span>
+<span class="text-xs font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> search </span>
+<span class="text-xs font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> add_circle_outline </span>
+<span class="text-xs font-medium">Sell</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> chat_bubble_outline </span>
+<span class="text-xs font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> person_outline </span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</div>
+
+</body></html>

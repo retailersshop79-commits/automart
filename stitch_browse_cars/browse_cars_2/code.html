@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Car Marketplace</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "foreground-light": "#111618",
+              "foreground-dark": "#e3e8ea",
+              "subtle-light": "#617c89",
+              "subtle-dark": "#94a3b8",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e293b",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="max-w-md mx-auto min-h-screen flex flex-col">
+<header class="bg-surface-light dark:bg-surface-dark sticky top-0 z-10 shadow-sm">
+<div class="flex items-center justify-between p-4">
+<button class="text-foreground-light dark:text-foreground-dark p-2 -ml-2">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+</button>
+<h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">Browse Cars</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow pb-24">
+<div class="p-4 space-y-4 bg-surface-light dark:bg-surface-dark">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-full bg-background-light dark:bg-background-dark border-transparent focus:ring-primary focus:border-primary text-foreground-light dark:text-foreground-dark placeholder-subtle-light dark:placeholder-subtle-dark" placeholder="Search by make, model, or year" type="text"/>
+</div>
+<div class="flex items-center space-x-2 overflow-x-auto pb-2 -mx-4 px-4">
+<button class="flex items-center space-x-1 px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary whitespace-nowrap">
+<span class="text-sm font-semibold">Make</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center space-x-1 px-4 py-2 rounded-full bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark whitespace-nowrap">
+<span class="text-sm font-medium">Model</span>
+<span class="material-symbols-outlined text-base text-subtle-light dark:text-subtle-dark">expand_more</span>
+</button>
+<button class="flex items-center space-x-1 px-4 py-2 rounded-full bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark whitespace-nowrap">
+<span class="text-sm font-medium">Year</span>
+<span class="material-symbols-outlined text-base text-subtle-light dark:text-subtle-dark">expand_more</span>
+</button>
+<button class="flex items-center space-x-1 px-4 py-2 rounded-full bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark whitespace-nowrap">
+<span class="text-sm font-medium">Price</span>
+<span class="material-symbols-outlined text-base text-subtle-light dark:text-subtle-dark">expand_more</span>
+</button>
+<button class="flex items-center space-x-1 px-4 py-2 rounded-full bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark whitespace-nowrap">
+<span class="text-sm font-medium">Mileage</span>
+<span class="material-symbols-outlined text-base text-subtle-light dark:text-subtle-dark">expand_more</span>
+</button>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-start p-4 space-x-4">
+<img alt="Toyota Camry" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_HN1suyNVCmEeBiIrmqIk_F8cmgFwCBP1NSvoSYU2HA-URa4xsnfmp0CyESgQkjbI0lxhPVc6kLyoE5AtCL4Uf2mNmT0dKoHNdKKOJGLbNDoRHZttXcMfsgsGzXLdPj6ZUKUqWb5LHCz4ZvcBOOe4skpdBc4Bz6dN4cO3xo0Aw5vIcrolYYM7lahg-8tJK4klDs8xQ7AZr7eWHejhZgXCr6Is6cRt0mHoyLd1c65Te2bqjEcg2mKIAFc5fnmVjp03fCbCQ9s9t-yC"/>
+<div class="flex-1">
+<p class="font-bold text-lg text-foreground-light dark:text-foreground-dark">Toyota Camry</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2018 · 45,000 mi</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Main Street Motors</p>
+<p class="font-bold text-primary text-xl mt-2">$18,500</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-start p-4 space-x-4">
+<img alt="Honda Civic" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiFuKwkG6e17F0x19c0VvYxye98KnRfYRcYZrHNoGcm1m0G2X6rWDRC4oU__aZPGMEhtySGq5GjeMtoFhOJSuCSXY6-KKkchQG87qSPwx3e6LQ9dFsyCbQeO6Hb7cO87UMMtmQlM4SbBw89CjV5wAD7h3vzPpkXfkeZJ79mt2UTGJt24scMzKyKnNcC5DPE85iGwfagfp0zeYN5hZwRg3K3c94s52E7Kbu0WglxlyDodfqbnTVN6IH0WlX-80TLPi3za7oKx9-dk9l"/>
+<div class="flex-1">
+<p class="font-bold text-lg text-foreground-light dark:text-foreground-dark">Honda Civic</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2019 · 32,000 mi</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Prestige Auto</p>
+<p class="font-bold text-primary text-xl mt-2">$16,800</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-start p-4 space-x-4">
+<img alt="Ford Mustang" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTmVCQkefVRwC-Fl1fqh82LxYv2nREj9S4etMTCxxOFJvu-hz7di6R83p60VP7MQOZ0K2zGlq01lTvWmkbPRfeHqO3hMsBQFv9x2-pTEz9NK9U6UY_FqCKZ1xTN36honGmCPb265tUa-0BUyU6H3mo1sM0Uf5zTeMmhxsqMKiJUjmn0AXZDs4i2LRD5_1IglCDbrV6cPpNp7YaS1I0AlM9SvtO0LbKrNW0M6ODZ5q41Bz8z3vuZ3nKryYvALUxgQYBxCmUDdks6LIG"/>
+<div class="flex-1">
+<p class="font-bold text-lg text-foreground-light dark:text-foreground-dark">Ford Mustang</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2020 · 28,000 mi</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Sunset Cars</p>
+<p class="font-bold text-primary text-xl mt-2">$25,000</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-start p-4 space-x-4">
+<img alt="Chevrolet Silverado" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqO_cIh-eXIa51ff6Zadn7FfzHhjYUPBp-gbUp-aielnji4WigtCfdNmLWjUYZqxgcgV9nV4h0jVLVm7did4M94jTIEaHEjcfHeIFuQHIfFw_uJLsERtQ1vyaBglTXac1beKzNV9HArpDQMkQP7K3SYjo3FM8gQsnEGBsZmEUXaqC77LNqXwC4K1-9Y0ewN5-VEEFAP5WPUPnQVk2kdzRj4ij3uS8FhtrFhMK6KyxpyuXRj4lI3NQJ7RFce5SB14-zoNdl5SAynBJr"/>
+<div class="flex-1">
+<p class="font-bold text-lg text-foreground-light dark:text-foreground-dark">Chevrolet Silverado</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2017 · 55,000 mi</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Reliable Rides</p>
+<p class="font-bold text-primary text-xl mt-2">$22,000</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-start p-4 space-x-4">
+<img alt="Nissan Altima" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsrhil5oW8yxYjn_A_r9BOHTR6jt3IFdhF_Mnn23erxJr_eIo4t7sy-PXfA3MkHlLLMubELHR2tP-miwAKX6vyEKW_lsHO9mrNL5jMe3oLcid83Gc2wTNt9xIma-nQARL8fPImHSp70Nb80dtY4jKqiNjIpA9XvSWM2Ge1XR2OIeEbgnvOZY8evUxTAly-4ASySRplV9NvYAUXfATrnxeq-pOHAqD8Qi0xJ9iOTrsVbYHmQdeLN3m7DXI9j1gZvU1mfrNgPEakQXOf"/>
+<div class="flex-1">
+<p class="font-bold text-lg text-foreground-light dark:text-foreground-dark">Nissan Altima</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2016 · 60,000 mi</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Citywide Motors</p>
+<p class="font-bold text-primary text-xl mt-2">$14,500</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-surface-light dark:bg-surface-dark border-t border-background-light dark:border-background-dark">
+<div class="flex justify-around items-center h-20">
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">directions_car</span>
+<span class="text-xs font-bold">Browse</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="text-xs font-medium">Dealer</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">space_dashboard</span>
+<span class="text-xs font-medium">Dashboard</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

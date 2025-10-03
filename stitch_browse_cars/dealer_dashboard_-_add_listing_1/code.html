@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Car Listing Wizard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1193d4',
+            'background-light': '#f6f7f8',
+            'background-dark': '#101c22',
+            'surface-light': '#ffffff',
+            'surface-dark': '#1a2730',
+          },
+          fontFamily: {
+            display: ['Manrope'],
+          },
+          borderRadius: {
+            DEFAULT: '0.25rem',
+            lg: '0.5rem',
+            xl: '0.75rem',
+            full: '9999px',
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      min-height: 100dvh;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-surface-light px-4 py-3 dark:border-slate-800 dark:bg-surface-dark">
+<button class="text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">
+          arrow_back
+        </span>
+</button>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Add Listing</h1>
+<div class="w-6"></div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="px-6 py-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Step 1 of 3</span>
+</div>
+<div class="mt-2 h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700">
+<div class="h-2 rounded-full bg-primary" style="width: 33%;"></div>
+</div>
+</div>
+<div class="p-6">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Vehicle Information</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Start with the basics of the car.</p>
+<form class="mt-6 space-y-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="make">Make</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="make" name="make" placeholder="e.g., Toyota" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="model">Model</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="model" name="model" placeholder="e.g., Camry" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="year">Year</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="year" name="year" placeholder="e.g., 2023" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="mileage">Mileage (km)</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="mileage" name="mileage" placeholder="e.g., 15000" type="number"/>
+</div>
+</div>
+</form>
+</div>
+<div class="hidden p-6">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Upload Photos</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">High-quality photos increase buyer interest.</p>
+<div class="mt-6">
+<div class="flex items-center justify-center rounded-lg border-2 border-dashed border-slate-300 bg-slate-50 p-8 dark:border-slate-700 dark:bg-slate-900">
+<div class="text-center">
+<span class="material-symbols-outlined mx-auto text-5xl text-slate-400">
+                add_a_photo
+              </span>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Tap to upload photos</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">Maximum 10 photos</p>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-3 gap-4">
+<div class="relative">
+<img alt="Car front" class="h-24 w-full rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv9vtgyuGWwkjguOmxxjgGtux9CaMavxZblKVB6EyKoCU9LXM5da9INzWLw9M6ZSC_Lyx0YozDt9ZqxRTz1WltPlg35m658ZuT3PWTYPaydvoSyC3bMCGfzt2TtayFa1yTO00dtZ1Y6J17SobA0JFBTMjGnCCv3k1ass_7m1MHFXHBf58mHukfltTc0mnUYnR02ysPcDw9j-k0EriKGtn1bppK9uDo5v0kXY7COL-WpbVlSsVNUz4FhqkX_CU5VCiLnrIo8Cstp2nq"/>
+<button class="absolute -right-2 -top-2 rounded-full bg-red-500 p-1 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="relative">
+<img alt="Car interior" class="h-24 w-full rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJEDqs3lVVhkLe3sVIyiOoiUHADXvnrOfa48tOh3zu3iBCBFiwa6KJbO9_zVMOn9fUczOb7bhG7YfNmEi8PrcfdbYU90zvllli19qk3JUMCybtG-WTSvOJyUJ97fpbjICTD9g37QNTK9Rpj7ZtaldmDw_nZQNP8nV_0VIsHpvCc4hu0ZAxFkVZRDzTtlWE6c859Vq9hJeeohhZ8WSX29FIkrI7il_vktplTIMqEsQE_lVBmak3O1TMF7I0oWSlxOxqbzpsITSJHkPj"/>
+<button class="absolute -right-2 -top-2 rounded-full bg-red-500 p-1 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden p-6">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Details &amp; Pricing</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Provide final details to complete the listing.</p>
+<form class="mt-6 space-y-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Description</label>
+<textarea class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="description" name="description" placeholder="Describe the vehicle's features and condition..." rows="4"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="price">Price ($)</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="price" name="price" placeholder="e.g., 25000" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="whatsapp">WhatsApp Number</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500" id="whatsapp" name="whatsapp" placeholder="Your contact number for buyers" type="tel"/>
+</div>
+</form>
+</div>
+</main>
+<footer class="sticky bottom-0 border-t border-slate-200 bg-surface-light p-4 dark:border-slate-800 dark:bg-surface-dark">
+<div class="flex items-center justify-between gap-4">
+<button class="w-1/2 rounded-lg border border-slate-300 bg-white py-3 font-bold text-slate-900 transition-colors dark:border-slate-600 dark:bg-slate-800 dark:text-white">Previous</button>
+<button class="w-1/2 rounded-lg bg-primary py-3 font-bold text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-[1.02]">Next</button>
+</div>
+</footer>
+</div>
+
+</body></html>
